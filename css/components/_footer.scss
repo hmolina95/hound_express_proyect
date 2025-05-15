@@ -1,0 +1,68 @@
+.footer {
+    background-color: $color-secondary;
+    color: $color-white;
+    padding: $spacing-lg $spacing-xl;
+    font-family: $font-base;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: $spacing-lg;
+
+        @include respond-to(md) {
+            flex-direction: column;
+            gap: $spacing-md;
+        }
+
+        @include respond-to(sm) {
+            flex-direction: column;
+            gap: $spacing-sm;
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing-md;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+        font-weight: $font-medium;
+        font-size: $font-sm;
+        display: flex;
+        align-items: center;
+        gap: $spacing-xs;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    &__copyright {
+        font-size: $font-sm;
+        font-weight: $font-regular;
+        color: $color-primary;
+    }
+
+    @include respond-to(md) {
+        padding: $spacing-md $spacing-lg;
+    }
+
+    @include respond-to(sm) {
+        padding: $spacing-sm $spacing-md;
+    }
+}

@@ -1,0 +1,80 @@
+.form {
+    max-width: 600px;
+    margin: $spacing-xxl auto;
+    padding: $spacing-lg;
+    background-color: $color-light-bg;
+    border-radius: $radius-xl;
+    box-shadow: $box-shadow;
+
+    @include respond-to(md) {
+        max-width: 500px;
+        padding: $spacing-md;
+    }
+
+    @include respond-to(sm) {
+        max-width: 100%;
+        padding: $spacing-sm;
+    }
+
+    &__fieldset {
+        border: none;
+        padding: 0;
+        font-family: $font-base;
+    }
+
+    &__legend {
+        font-size: $font-lg;
+        font-weight: $font-bold;
+        margin-bottom: $spacing-lg;
+        color: $color-dark-gray;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $spacing-md;
+    }
+
+    &__label {
+        font-weight: $font-medium;
+        margin-bottom: $spacing-xs;
+        color: $color-medium-gray;
+    }
+
+    &__input[type="text"],
+    &__input[type="date"],
+    &__select {
+        padding: $spacing-sm;
+        border: 1px solid $color-border;
+        border-radius: $radius-md;
+        font-size: $font-base-size;
+        background-color: $color-white;
+        transition: border-color 0.3s;
+
+        &:focus {
+            border-color: $color-secondary;
+            outline: none;
+        }
+
+        @include respond-to(sm) {
+            width: 100%;
+        }
+    }
+
+    &__btn--submit {
+        display: block;
+        margin: 0 auto;
+        padding: $spacing-lg $spacing-xl;
+        background-color: $color-secondary;
+        color: $color-white;
+        border: none;
+        border-radius: $radius-md;
+        font-size: $font-base-size;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background-color: darken($color-secondary, 10%);
+        }
+    }
+}

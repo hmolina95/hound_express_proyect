@@ -1,0 +1,39 @@
+.nav-menu {
+    list-style: none;
+    @include flex-center(flex-start, center);
+    gap: $spacing-md;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        @include flex-center(flex-start, center);
+
+        a {
+            text-decoration: none;
+            color: $color-white;
+            font-weight: bold;
+            padding: $spacing-xs $spacing-sm;
+            border-radius: $radius-sm;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: $color-secondary;
+            }
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+    }
+
+    @include respond-to(md) {
+        flex-direction: column;
+        gap: $spacing-md;
+    }
+
+    @include respond-to(sm) {
+        gap: $spacing-xs;
+    }
+}

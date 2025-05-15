@@ -1,0 +1,26 @@
+.header {
+    @include flex-center(space-between, center);
+    padding: $spacing-sm $spacing-xl;
+    background-color: $color-primary;
+    font-family: $font-base;
+
+    &__logo {
+        @include flex-center(flex-start, center);
+        padding: $spacing-sm;
+
+        &--img {
+            width: 250px;
+            height: auto;
+        }
+    }
+
+    @include respond-to(md) {
+        flex-direction: column;
+        padding: $spacing-sm;
+    }
+
+    @include respond-to(sm) {
+        flex-direction: column;
+        padding: $spacing-xs;
+    }
+}

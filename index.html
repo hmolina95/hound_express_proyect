@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hound Express</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="img/logoAzulBlancoHE.png" alt="Hound Express Logo" class="header__logo--img">
+        </div>
+        <nav class="header-nav">
+            <ul class="nav-menu">
+                <li class="nav-menu__item"><a href="">Inicio</a></li>
+                <li class="nav-menu__item"><a href="">Registro de Guías</a></li>
+                <li class="nav-menu__item"><a href="">Estado General</a></li>
+                <li class="nav-menu__item"><a href="">Lista de Guías</a></li>
+                <li class="nav-menu__item">
+                    <img src="img/search_Icon_White10926264.png" class="nav-menu__icon">
+                    <a href="">Buscar Guías</a>
+                </li>
+                <li class="nav-menu__item"><a href="">Historial de Guías</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="form">
+            <article class="form__content">
+                <form class="form__container">
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Formulario de Registro de Guías</legend>
+                        <div class="form__group">
+                            <label class="form__label">Número de guía</label>
+                            <input type="text" id="tracking-number" name="tracking-number" placeholder="EJM: LP-12345-628-110" class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label">Origen</label>
+                            <input type="text" id="origin" name="origin" class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label">Destino</label>
+                            <input type="text" id="destination" name="destination" class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label">Destinatario</label>
+                            <input type="text" id="recipient" name="recipient" class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label">Fecha de Creación</label>
+                            <input type="date" id="creation-date" name="creation-date" class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <legend class="form__sublegend">Estado inicial</legend>
+                            <div class="form__select-wrapper">
+                                <select class="form__select">
+                                    <option value="pending" class="form__option">Pendiente</option>
+                                    <option value="in-transit" class="form__option">En transito</option>
+                                    <option value="delivered" class="form__option">Entregado</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </article>
+            <article>
+                <input type="button" value="Enviar" class="form__btn--submit">
+            </article>
+        </section>
+        <section class="status">
+            <article class="status__panel">
+                <h1 class="status__title">Estado General</h1>
+                <ul class="status__list">
+                    <li class="status__item">Número total de guías activas</li>
+                    <li class="status__item">Guías en tránsito</li>
+                    <li class="status__item">Guías entregadas</li>
+                </ul>
+            </article>
+        </section>
+        <section class="tracking">
+            <article class="tracking__panel">
+                <h1 class="tracking__title">Lista de guías</h1>
+                <table class="tracking__table">
+                    <caption class="tracking__caption">Lista de guías registradas</caption>
+                    <thead class="tracking__header">
+                        <tr class="tracking__row">
+                            <th class="tracking__header-cell">Número de guía</th>
+                            <th class="tracking__header-cell">Estado actual</th>
+                            <th class="tracking__header-cell">Origen</th>
+                            <th class="tracking__header-cell">Destino</th>
+                            <th class="tracking__header-cell">Fecha de la última actualización</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tracking__body">
+                        <tr class="tracking__row">
+                            <td class="tracking__cell">Número de guía</td>
+                            <td class="tracking__cell">Estado actual</td>
+                            <td class="tracking__cell">Origen</td>
+                            <td class="tracking__cell">Destino</td>
+                            <td class="tracking__cell">Fecha de la última actualización</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tracking__actions">
+                    <input type="button" value="Actualizar Estado" class="tracking__button tracking__button--update">
+                    <input type="button" value="Ver Historial" class="tracking__button tracking__button--update">
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__content">
+            <nav class="footer__nav">
+                <ul class="footer__menu">
+                    <li class="footer__item"><a href="" class="footer__link">Contáctanos</a></li>
+                    <li class="footer__item"><a href="" class="footer__link">Políticas de privacidad</a></li>
+                    <li class="footer__item"><a href="" class="footer__link">Preguntas frecuentes</a></li>
+                    <li class="footer__item">
+                        <a href="" class="footer__social-link"><img src="img/instagram_1400829.png" alt="Instagram" class="footer__icon"></a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__social-link"><img src="img/twitterX_12452418.png" alt="X-Twitter" class="footer__icon"></a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__social-link"><img src="img/facebook_1051309.png" alt="Facebook" class="footer__icon"></a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__social-link"><img src="img/linkedin_3992560.png" alt="LinkedIn" class="footer__icon"></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__copyright">
+                <p class="footer__text">
+                    <small>&copy; 2025 Hound Express. Todos los derechos reservados.</small>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

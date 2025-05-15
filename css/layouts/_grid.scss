@@ -1,0 +1,133 @@
+.status {
+    max-width: 700px;
+    margin: $spacing-xxl auto;
+    padding: $spacing-lg $spacing-xl;
+    background-color: $color-white;
+    border: 2px solid $color-border;
+    border-radius: $radius-xxl;
+    box-shadow: $box-shadow-light;
+    font-family: $font-base;
+
+    &__title {
+        font-size: $font-xl;
+        font-weight: $font-bold;
+        margin-bottom: $spacing-xl;
+        color: $color-dark-gray;
+        text-align: center;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+
+        @include respond-to(sm) {
+            gap: $spacing-sm;
+        }
+    }
+
+    &__item {
+        background-color: $color-light-gray;
+        padding: $spacing-md $spacing-lg;
+        border-radius: $radius-md;
+        font-size: $font-md;
+        color: $color-medium-gray;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $color-secondary;
+            cursor: pointer;
+        }
+    }
+
+    @include respond-to(md) {
+        max-width: 600px;
+        padding: $spacing-md $spacing-lg;
+    }
+
+    @include respond-to(sm) {
+        max-width: 100%;
+        padding: $spacing-sm;
+    }
+}
+
+.tracking {
+    max-width: 1000px;
+    margin: $spacing-xxl auto;
+    padding: $spacing-lg;
+    background-color: $color-white;
+    border-radius: $radius-xxl;
+    box-shadow: $box-shadow;
+    font-family: $font-base;
+
+    &__title {
+        font-size: $font-xl;
+        font-weight: $font-bold;
+        color: $color-dark-gray;
+        text-align: center;
+        margin-bottom: $spacing-xl;
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: $font-base-size;
+        background-color: $color-secondary;
+    }
+
+    &__caption {
+        caption-side: top;
+        font-size: $font-md;
+        font-weight: $font-medium;
+        margin-bottom: $spacing-sm;
+        color: $color-medium-gray;
+    }
+
+    &__header-cell,
+    &__cell {
+        padding: $spacing-md;
+        border: 1px solid $color-border;
+        text-align: left;
+    }
+
+    &__header-cell {
+        background-color: $color-primary;
+        color: $color-white;
+        font-weight: $font-medium;
+    }
+
+    &__row:nth-child(even) {
+        background-color: $color-table-even;
+    }
+
+    &__row:hover {
+        background-color: $color-table-hover;
+        transition: background-color 0.3s;
+    }
+
+    &__actions {
+        margin-top: $spacing-xl;
+        text-align: right;
+        display: flex;
+        gap: $spacing-sm;
+        justify-content: flex-end;
+    }
+
+    &__button {
+        padding: $spacing-sm $spacing-lg;
+        font-size: $font-base-size;
+        background-color: $color-primary;
+        color: $color-white;
+        border: none;
+        border-radius: $radius-md;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background-color: $color-secondary;
+        }
+    }
+}
