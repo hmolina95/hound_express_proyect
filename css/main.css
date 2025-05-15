@@ -399,4 +399,34 @@
 .dark-mode .nav-menu__item a:hover {
   background-color: #6AC6DE;
   color: #121212;
+}
+
+.toggle-theme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 10px 15px;
+  background-color: #6AC6DE;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.toggle-theme:hover {
+  background-color: #40b6d5;
+  color: #091E3F;
+}
+
+.dark-mode .toggle-theme {
+  background-color: #fce4ec;
+  color: #121212;
+}
+.dark-mode .toggle-theme:hover {
+  background-color: #f8bbd0;
+  color: #121212;
 }/*# sourceMappingURL=main.css.map */
