@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script src="JavaScript/script.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -76,9 +77,9 @@
             <article class="status__panel">
                 <h1 class="status__title">Estado General</h1>
                 <ul class="status__list">
-                    <li class="status__item">Número total de guías activas</li>
-                    <li class="status__item">Guías en tránsito</li>
-                    <li class="status__item">Guías entregadas</li>
+                    <li class="status__item">Número total de guías activas <span id="total-active">0</span></li>
+                    <li class="status__item">Guías en tránsito <span id="in-transit-count">0</span></li>
+                    <li class="status__item">Guías entregadas <span id="delivered-count">0</span></li>
                 </ul>
             </article>
         </section>
@@ -108,11 +109,19 @@
                 </table>
                 <div class="tracking__actions">
                     <input type="button" value="Actualizar Estado" class="tracking__button tracking__button--update">
-                    <input type="button" value="Ver Historial" class="tracking__button tracking__button--update">
                 </div>
             </article>
         </section>
     </main>
+
+    <div id="history-modal" class="modal hidden">
+        <div class="modal__content">
+            <span id="close-modal" class="modal__close">&times;</span>
+            <h2>Historial de Estados</h2>
+            <ul id="history-list" class="modal__list"></ul>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="footer__content">
             <nav class="footer__nav">
