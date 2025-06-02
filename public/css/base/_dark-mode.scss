@@ -70,4 +70,24 @@
             color: #121212;
         }
     }
+
+    .status-select {
+        background-color: $dark-article-bg;
+        color: $dark-text;
+        border: 1px solid $dark-muted;
+
+        option {
+            background-color: $dark-header;
+            color: $dark-text;
+        }
+
+        &:hover {
+            border-color: $dark-highlight;
+        }
+
+        &:focus {
+            border-color: $dark-highlight;
+            box-shadow: 0 0 0 2px rgba($dark-highlight, 0.25);
+        }
+    }
 }

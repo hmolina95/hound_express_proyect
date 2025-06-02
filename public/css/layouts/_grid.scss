@@ -131,3 +131,57 @@
         }
     }
 }
+
+.status-panel span {
+    display: inline-block;
+    padding: 0.3em 0.6em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+#total-active,
+#in-transit-count,
+#delivered-count {
+    padding: 3px 9px;
+    border-radius: 100%;
+    background-color: $color-primary;
+    color: $color-white;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: $font-base;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal__content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal__close {
+    float: right;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.modal__list {
+    margin-top: 1rem;
+}
